@@ -1,0 +1,21 @@
+:root{--bg:#0f1720;--card:#0b1220;--accent:#06b6d4;--muted:#9ca3af;--glass:rgba(255,255,255,0.03)}*{box-sizing:border-box}html,body,#app{height:100%}body{background:linear-gradient(180deg,#071122 0%,#08121a 60%);color:#e6eef6;font-family:Arial,Segoe UI,SegoeUIHebrew,Helvetica,sans-serif;margin:0;padding:32px;direction:rtl}
+.container{max-width:880px;margin:0 auto;background:var(--glass);padding:28px;border-radius:12px;backdrop-filter:blur(6px);box-shadow:0 6px 30px rgba(2,6,23,0.6)}h1{margin:0 0 6px 0;font-size:28px}p.lead{color:var(--muted);margin:0 0 20px}
+form{display:flex;gap:10px;align-items:center}
+input#address{flex:1;padding:12px 14px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:inherit;font-size:16px}
+button#submit{background:linear-gradient(90deg,var(--accent),#0ea5a1);border:none;padding:10px 16px;border-radius:10px;color:#022;cursor:pointer;font-weight:700}
+#results{margin-top:22px}
+.card{background:rgba(255,255,255,0.03);padding:14px;border-radius:10px;margin-bottom:10px;border:1px solid rgba(255,255,255,0.03)}
+.small{color:var(--muted);font-size:13px}
+.score{float:left;background:rgba(255,255,255,0.06);padding:6px 10px;border-radius:8px;font-weight:700}
+.matched{font-weight:600}
+.rationale{white-space:pre-wrap;background:rgba(255,255,255,0.02);padding:10px;border-radius:8px;margin-top:8px}
+
+.candidate{display:flex;justify-content:space-between;align-items:center}
+.candidate .candidate-name{font-weight:700}
+.select-btn{background:#10b981;border:none;color:white;padding:8px 10px;border-radius:8px;cursor:pointer}
+
+.eligible{border-left:6px solid #10b981}
+.not-eligible{border-left:6px solid #ef4444}
+.neutral{border-left:6px solid #9ca3af}
+
+.json-dev{direction:ltr;text-align:left;white-space:pre-wrap;overflow:auto;font-family:monospace;background:rgba(0,0,0,0.25);padding:10px;border-radius:8px}

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>מנוע זכאות תחבורה</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>מנוע זכאות תחבורה</h1>
+    <p class="lead">הקלידו כתובת חופשית בעברית וקבלו את המועמדים, ציון ודוח הסבר.</p>
+
+    <form id="resolveForm">
+      <label for="address">כתובת / יישוב</label>
+      <input id="address" name="address" autocomplete="off" placeholder="הקלידו כתובת בעברית" />
+      <button id="submit">חפש</button>
+    </form>
+
+    <section id="results" aria-live="polite"></section>
+
+    <template id="candidate-template">
+      <div class="card candidate">
+        <div class="candidate-info">
+          <div class="candidate-name"></div>
+          <div class="candidate-meta small"></div>
+        </div>
+        <div>
+          <button class="select-btn">בחר יישוב</button>
+        </div>
+      </div>
+    </template>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,258 @@
+[
+  {
+    "case": "TC-01",
+    "input": "רוטשילד 10, תל אביב",
+    "status_code": 200,
+    "response": {
+      "status": "AMBIGUOUS_MATCH",
+      "data": {
+        "query": "רוטשילד 10, תל אביב",
+        "candidates": [
+          {
+            "locality_id": 719,
+            "locality_name": "תל קציר",
+            "regional_council": null,
+            "is_eligible": true
+          },
+          {
+            "locality_id": 1283,
+            "locality_name": "תל תאומים",
+            "regional_council": null,
+            "is_eligible": true
+          },
+          {
+            "locality_id": 84,
+            "locality_name": "תל יוסף",
+            "regional_council": null,
+            "is_eligible": true
+          },
+          {
+            "locality_id": 1054,
+            "locality_name": "תל שבע",
+            "regional_council": null,
+            "is_eligible": true
+          },
+          {
+            "locality_id": 103,
+            "locality_name": "תל עדשים",
+            "regional_council": null,
+            "is_eligible": true
+          }
+        ]
+      },
+      "error": {
+        "code": "MULTIPLE_LOCALITIES_FOUND",
+        "message": "אותרו מספר יישובים תואמים. אנא בחר את היישוב המדויק מתוך הרשימה."
+      }
+    }
+  },
+  {
+    "case": "TC-02",
+    "input": "הרצל 1, דימונה",
+    "status_code": 200,
+    "response": {
+      "status": "SUCCESS",
+      "data": {
+        "query": "הרצל 1, דימונה",
+        "matched_locality": {
+          "locality_id": 2200,
+          "locality_name": "דימונה",
+          "regional_council": null,
+          "periphery_cluster": 3,
+          "socio_cluster": 4
+        },
+        "is_eligible": true,
+        "confidence_score": 1.0,
+        "eligibility_reasons": {
+          "periphery_cluster": 3,
+          "socio_cluster": 4,
+          "reason": "זכאי להנחה: עומד בשני התנאים (אשכול פריפריאלי 3 וסוציו-אקונומי 4).",
+          "is_eligible": true
+        }
+      },
+      "error": null
+    }
+  },
+  {
+    "case": "TC-03",
+    "input": "רבי עקיבא 30, בני ברק",
+    "status_code": 200,
+    "response": {
+      "status": "SUCCESS",
+      "data": {
+        "query": "רבי עקיבא 30, בני ברק",
+        "matched_locality": {
+          "locality_id": 6100,
+          "locality_name": "בני ברק",
+          "regional_council": null,
+          "periphery_cluster": 10,
+          "socio_cluster": 2
+        },
+        "is_eligible": true,
+        "confidence_score": 1.0,
+        "eligibility_reasons": {
+          "periphery_cluster": 10,
+          "socio_cluster": 2,
+          "reason": "זכאי להנחה: היישוב משתייך לאשכול סוציו-אקונומי 2 (זכאות באשכולות 1–5).",
+          "is_eligible": true
+        }
+      },
+      "error": null
+    }
+  },
+  {
+    "case": "TC-04",
+    "input": "יפו 200, ירושלים",
+    "status_code": 200,
+    "response": {
+      "status": "SUCCESS",
+      "data": {
+        "query": "יפו 200, ירושלים",
+        "matched_locality": {
+          "locality_id": 3000,
+          "locality_name": "ירושלים",
+          "regional_council": null,
+          "periphery_cluster": 9,
+          "socio_cluster": 2
+        },
+        "is_eligible": true,
+        "confidence_score": 1.0,
+        "eligibility_reasons": {
+          "periphery_cluster": 9,
+          "socio_cluster": 2,
+          "reason": "זכאי להנחה: היישוב משתייך לאשכול סוציו-אקונומי 2 (זכאות באשכולות 1–5).",
+          "is_eligible": true
+        }
+      },
+      "error": null
+    }
+  },
+  {
+    "case": "TC-05",
+    "input": "מזכירות קיבוץ אילות",
+    "status_code": 200,
+    "response": {
+      "status": "SUCCESS",
+      "data": {
+        "query": "מזכירות קיבוץ אילות",
+        "matched_locality": {
+          "locality_id": 1126,
+          "locality_name": "אילות",
+          "regional_council": null,
+          "periphery_cluster": 1,
+          "socio_cluster": 5
+        },
+        "is_eligible": true,
+        "confidence_score": 1.0,
+        "eligibility_reasons": {
+          "periphery_cluster": 1,
+          "socio_cluster": 5,
+          "reason": "זכאי להנחה: עומד בשני התנאים (אשכול פריפריאלי 1 וסוציו-אקונומי 5).",
+          "is_eligible": true
+        }
+      },
+      "error": null
+    }
+  },
+  {
+    "case": "TC-06",
+    "input": "העצמאות 5, כרמיאל.",
+    "status_code": 200,
+    "response": {
+      "status": "SUCCESS",
+      "data": {
+        "query": "העצמאות 5, כרמיאל.",
+        "matched_locality": {
+          "locality_id": 1139,
+          "locality_name": "כרמיאל",
+          "regional_council": null,
+          "periphery_cluster": 4,
+          "socio_cluster": 5
+        },
+        "is_eligible": true,
+        "confidence_score": 0.9,
+        "eligibility_reasons": {
+          "periphery_cluster": 4,
+          "socio_cluster": 5,
+          "reason": "זכאי להנחה: עומד בשני התנאים (אשכול פריפריאלי 4 וסוציו-אקונומי 5).",
+          "is_eligible": true
+        }
+      },
+      "error": null
+    }
+  },
+  {
+    "case": "TC-07",
+    "input": "משק 12, תראבין א-צאנע",
+    "status_code": 200,
+    "response": {
+      "status": "SUCCESS",
+      "data": {
+        "query": "משק 12, תראבין א-צאנע",
+        "matched_locality": {
+          "locality_id": 652,
+          "locality_name": "אבטין",
+          "regional_council": null,
+          "periphery_cluster": 5,
+          "socio_cluster": 5
+        },
+        "is_eligible": true,
+        "confidence_score": 0.76,
+        "eligibility_reasons": {
+          "periphery_cluster": 5,
+          "socio_cluster": 5,
+          "reason": "זכאי להנחה: עומד בשני התנאים (אשכול פריפריאלי 5 וסוציו-אקונומי 5).",
+          "is_eligible": true
+        }
+      },
+      "error": null
+    }
+  },
+  {
+    "case": "TC-08",
+    "input": "התאנה 14",
+    "status_code": 200,
+    "response": {
+      "status": "AMBIGUOUS_MATCH",
+      "data": {
+        "query": "התאנה 14",
+        "candidates": [
+          {
+            "locality_id": 1331,
+            "locality_name": "כמאנה",
+            "regional_council": null,
+            "is_eligible": true
+          },
+          {
+            "locality_id": 3560,
+            "locality_name": "אלקנה",
+            "regional_council": null,
+            "is_eligible": false
+          },
+          {
+            "locality_id": 347,
+            "locality_name": "מנרה",
+            "regional_council": null,
+            "is_eligible": true
+          },
+          {
+            "locality_id": 302,
+            "locality_name": "דפנה",
+            "regional_council": null,
+            "is_eligible": true
+          },
+          {
+            "locality_id": 1366,
+            "locality_name": "נווה",
+            "regional_council": null,
+            "is_eligible": true
+          }
+        ]
+      },
+      "error": {
+        "code": "MULTIPLE_LOCALITIES_FOUND",
+        "message": "אותרו מספר יישובים תואמים. אנא בחר את היישוב המדויק מתוך הרשימה."
+      }
+    }
+  }
+]
